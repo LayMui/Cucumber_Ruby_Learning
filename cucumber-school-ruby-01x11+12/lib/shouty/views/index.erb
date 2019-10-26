@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shouty</title>
+  </head>
+  <body>
+    <form action="/shouts?name=<%= person_name %>" method="post">
+      <label for=message>Message</label>
+      <textarea id=message type=text name=message></textarea>
+      <button type=submit>Shout</button>
+    </form>
+    <ul>
+      <% messages_heard.each do |message| %>
+        <li class="message"><%= message %></li>
+      <% end %>
+    </ul>
+  </body>
+</html>
